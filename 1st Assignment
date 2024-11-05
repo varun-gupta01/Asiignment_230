@@ -155,7 +155,7 @@ int main() {
         base *= 10;
     }
     printf("%d", binary);
-return o;
+return 0;
 }
 QUES 8
 #include <stdio.h>
