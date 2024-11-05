@@ -9,6 +9,7 @@ char board[3][3] = {
 int player = 1;
 int choice;
 char mark;
+int moves = 0;
 
 void drawBoard() {
     printf("\nTic Tac Toe\n\n");
@@ -54,10 +55,17 @@ int main() {
         }
 
         board[row][col] = mark;
+        moves++;
 
         if (checkWin()) {
             drawBoard();
             printf("Player %d wins!\n", player);
+            break;
+        }
+
+        if (moves == 9) {
+            drawBoard();
+            printf("It's a draw!\n");
             break;
         }
 
