@@ -3,6 +3,7 @@ QUES 1
 
 int main() {
     int num, sum = 0, temp, digit;
+    printf("provide an integer");
     scanf("%d", &num);
     temp = num;
     while (temp != 0) {
@@ -21,6 +22,7 @@ int main() {
 
 int main() {
     int a, b, hcf = 1;
+    printf("provide 2 integer:");
     scanf("%d %d", &a, &b);
     for (int i = 1; i <= a && i <= b; i++) {
         if (a % i == 0 && b % i == 0)
@@ -36,9 +38,9 @@ int main() {
     int a, b;
     scanf("%d %d", &a, &b);
     while (b != 0) {
-        int borrow = (~a) & b;
+        int sub = (~a) & b;
         a = a ^ b;
-        b = borrow << 1;
+        b = sub << 1;
     }
     printf("%d", a);
     return 0;
@@ -153,6 +155,57 @@ int main() {
         base *= 10;
     }
     printf("%d", binary);
+return o;
+}
+QUES 8
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            if ((i + j) % 2 == 0)
+                printf("1");
+            else
+                printf("0");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+QUES 9
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j < i; j++) {
+            printf("%d", j % 2);
+        }
+        printf(" ");
+        for (int j = 0; j < i; j++) {
+            printf("%d", j % 2);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+QUES 10
+#include <stdio.h>
+
+int main() {
+    int n = 5;
+    for (int i = 0; i < n; i++) {
+        int number = 1;
+        for (int j = 0; j <= i; j++) {
+            printf("%d ", number);
+            number = number * (i - j) / (j + 1);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
     return 0;
 }
 
